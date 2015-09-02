@@ -32,6 +32,8 @@ export default function (options = {}, callback = function noop () {}) {
     let output = '';
 
     if (specFiles.length) {
+      protractorArgs = protractorArgs.filter((arg) => !/^--suite=/.test(arg));
+
       log('debug','Targeting spec files:\n');
       log('debug', specFiles.join('\n') + '\n');
       protractorArgs.push('--specs', specFiles.join(','));

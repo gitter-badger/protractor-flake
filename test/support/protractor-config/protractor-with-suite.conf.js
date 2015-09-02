@@ -9,6 +9,10 @@ exports.config = {
     '../*.test.js'
   ],
 
+  suites: {
+    fail: ['../*.test.js']
+  },
+
   capabilities: {
     browserName: 'firefox',
     name: JOB_NAME
